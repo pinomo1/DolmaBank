@@ -1,4 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/nav_graph.xml" />
+        android:id="@+id/nav_graph.xml"
+        app:startDestination="@id/loadingFragment">
+    <fragment
+            android:id="@+id/loadingFragment"
+            android:name="com.pinomo.dolmabank.fragment.LoadingFragment"
+            android:label="LoadingFragment" >
+        <action
+                android:id="@+id/action_loadingFragment_to_registerLandingFragment"
+                app:destination="@id/registerLandingFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/registerFragment"
+            android:name="com.pinomo.dolmabank.fragment.RegisterFragment"
+            android:label="RegisterFragment" />
+    <fragment
+            android:id="@+id/registerLandingFragment"
+            android:name="com.pinomo.dolmabank.fragment.RegisterLandingFragment"
+            android:label="RegisterLandingFragment" >
+        <action
+                android:id="@+id/action_registerLandingFragment_to_registerFragment"
+                app:destination="@id/registerFragment" />
+    </fragment>
+</navigation>
