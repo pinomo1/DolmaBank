@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/backgroundColor">
     <ImageView
+            android:id="@+id/photo_frame"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:src="@drawable/image_circle"
@@ -19,14 +20,12 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/add_photo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/photo_frame"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.185" />
+        app:layout_constraintTop_toTopOf="@id/photo_frame" />
 
     <EditText
-        android:layout_width="300dp"
         android:layout_height="50dp"
         android:textSize="16sp"
         android:paddingLeft="16dp"
@@ -44,7 +43,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.350" />
     <EditText
-        android:layout_width="300dp"
         android:layout_height="50dp"
         android:textSize="16sp"
         android:paddingLeft="16dp"
@@ -80,7 +78,6 @@
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="300dp"
         android:layout_height="60dp"
         android:background="@null"
 
