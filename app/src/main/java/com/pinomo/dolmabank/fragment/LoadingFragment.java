@@ -16,8 +16,9 @@ public class LoadingFragment extends Fragment {
     @Nullable
     private LoadingFragmentBinding _binding = null;
 
-    @Nullable
+    @NonNull
     public LoadingFragmentBinding getBinding() {
+        assert _binding != null;
         return _binding;
     }
 

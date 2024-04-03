@@ -25,8 +25,9 @@ import com.pinomo.dolmabank.databinding.RegisterFragmentBinding;
 
 
 public class RegisterFragment extends Fragment {
-    @Nullable
+    @NonNull
     public RegisterFragmentBinding getBinding() {
+        assert _binding != null;
         return _binding;
     }
 
@@ -60,10 +61,8 @@ public class RegisterFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         _binding = RegisterFragmentBinding.inflate(inflater, container, false);
-        assert getBinding() != null;
         ConstraintLayout view = getBinding().getRoot();
 
-        assert getBinding() != null;
         autoCompleteTxt = getBinding().autoCompleteTxt;
         adapterLanguages = new CustomArrayAdapter(getContext(), R.layout.dropdown_item_layout, languages);
         autoCompleteTxt.setAdapter(adapterLanguages);
