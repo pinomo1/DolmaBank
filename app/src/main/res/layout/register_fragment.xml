@@ -26,6 +26,7 @@
         app:layout_constraintTop_toTopOf="@id/photo_frame" />
 
     <EditText
+            android:layout_width="0dp"
         android:layout_height="50dp"
         android:textSize="16sp"
         android:paddingLeft="16dp"
@@ -43,6 +44,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.350" />
     <EditText
+            android:layout_width="0dp"
         android:layout_height="50dp"
         android:textSize="16sp"
         android:paddingLeft="16dp"
@@ -78,6 +80,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
         android:layout_height="60dp"
         android:background="@null"
 
