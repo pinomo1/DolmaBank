@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgroundColor">
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/return_icon"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+
+        ></ImageView>
+    <TextView
+        android:layout_width="156dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="20dp"
+        android:text="Add new card"
+        android:fontFamily="@font/lora_medium"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <FrameLayout
+            android:layout_width="360dp"
+            android:layout_height="206dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/rounded_corner"
+            >
+
+            <TextView
+                android:layout_width="93dp"
+                android:layout_height="31dp"
+                android:layout_gravity="center"
+                android:text="Preview"
+                android:fontFamily="@font/lora_medium"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="24sp">
+
+            </TextView>
+        </FrameLayout>
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corner"
+            android:textSize="16sp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textColor="@color/white"
+            android:hint="Name of Bank"
+            android:textColorHint="@color/white"
+            android:fontFamily="@font/lora_medium"
+            android:inputType="text"></EditText>
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_corner"
+            android:textSize="16sp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textColor="@color/white"
+            android:hint="Cardholder Name"
+            android:textColorHint="@color/white"
+            android:fontFamily="@font/lora_medium"
+            android:inputType="text"></EditText>
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_corner"
+            android:textSize="16sp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textColor="@color/white"
+            android:hint="Card Number"
+            android:textColorHint="@color/white"
+            android:fontFamily="@font/lora_medium"
+            android:inputType="text"></EditText>
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_corner"
+            android:textSize="16sp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textColor="@color/white"
+            android:hint="Expiration Date"
+            android:textColorHint="@color/white"
+            android:fontFamily="@font/lora_medium"
+            android:inputType="text"></EditText>
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_corner"
+            android:textSize="16sp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textColor="@color/white"
+            android:hint="CVC Code"
+            android:textColorHint="@color/white"
+            android:fontFamily="@font/lora_medium"
+            android:inputType="text"></EditText>
+
+        <Switch
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:background="@drawable/rounded_corner"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:text="Visa"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/lora_medium"
+            android:textSize="16sp"></Switch>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="320dp"
+            android:layout_height="60dp"
+            android:background="@null"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.520">
+
+            <AutoCompleteTextView
+                android:popupBackground="@color/menuColor"
+                android:dropDownVerticalOffset="-10dp"
+                android:id="@+id/auto_complete_txt"
+                android:layout_width="match_parent"
+                android:dropDownHeight="200dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/lora_medium"
+                android:background="@drawable/rounded_corner"
+                android:textColor="@color/white"
+                android:inputType="none"
+                android:text="Card Design"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
