@@ -106,5 +106,22 @@
             />
 
     </com.google.android.material.textfield.TextInputLayout>
-
+    <Button
+        android:id="@+id/button"
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/lora_bold"
+        android:gravity="center"
+        android:onClick="startNewActivity"
+        android:paddingBottom="8dp"
+        android:text="Start Saving"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
 </androidx.constraintlayout.widget.ConstraintLayout>
