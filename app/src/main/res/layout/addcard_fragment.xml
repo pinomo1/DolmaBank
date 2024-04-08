@@ -20,7 +20,7 @@
         android:layout_marginStart="124dp"
         android:layout_marginTop="20dp"
         android:text="Add new card"
-        android:fontFamily="@font/lora_medium"
+        android:fontFamily="@font/lora_bold"
         android:textColor="@color/white"
         android:gravity="center"
         android:textSize="24sp"

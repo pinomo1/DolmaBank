@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgroundColor">
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/return_icon"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+
+        ></ImageView>
+
+    <TextView
+        android:layout_width="256dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/lora_bold"
+        android:gravity="center"
+        android:text="New Piggy Bank"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="112dp"
+        android:fontFamily="@font/lora_medium"
+        android:gravity="center"
+        android:text="Create a new piggy bank and put a percentage of every transaction into it!"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="192dp"
+        android:orientation="vertical"
+
+        >
+        <FrameLayout
+            android:layout_marginTop="28dp"
+            android:layout_width="380dp"
+            android:layout_height="66dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corner">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/purpose_icon"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="9dp"
+                ></ImageView>
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="34dp"
+                android:text="Purpose"
+                android:fontFamily="@font/lora_medium"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="16dp"></TextView>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_marginTop="28dp"
+            android:layout_width="380dp"
+            android:layout_height="66dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corner">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/banknot_icon"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="9dp"
+                ></ImageView>
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="34dp"
+                android:text="Goal"
+                android:fontFamily="@font/lora_medium"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="16dp"></TextView>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_marginTop="28dp"
+            android:layout_width="380dp"
+            android:layout_height="66dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corner">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/percentage_icon"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="9dp"
+                ></ImageView>
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="34dp"
+                android:text="Percentage"
+                android:fontFamily="@font/lora_medium"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="16dp"></TextView>
+        </FrameLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
