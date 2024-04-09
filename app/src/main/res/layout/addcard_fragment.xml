@@ -11,21 +11,19 @@
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/return_icon"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-
-        ></ImageView>
+        android:layout_marginTop="10dp"/>
     <TextView
-        android:layout_width="156dp"
+        android:layout_width="250dp"
         android:layout_height="31dp"
-        android:layout_marginStart="124dp"
         android:layout_marginTop="20dp"
-        android:text="Add new card"
+        android:text="@string/add_new_contact"
         android:fontFamily="@font/lora_bold"
         android:textColor="@color/white"
         android:gravity="center"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></TextView>
+            app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,7 +42,7 @@
                 android:layout_width="93dp"
                 android:layout_height="31dp"
                 android:layout_gravity="center"
-                android:text="Preview"
+                android:text="@string/preview_card"
                 android:fontFamily="@font/lora_medium"
                 android:textColor="@color/white"
                 android:gravity="center"
@@ -62,10 +60,10 @@
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:textColor="@color/white"
-            android:hint="Name of Bank"
+            android:hint="@string/name_of_bank"
             android:textColorHint="@color/white"
             android:fontFamily="@font/lora_medium"
-            android:inputType="text"></EditText>
+            android:inputType="text"/>
         <EditText
             android:layout_width="320dp"
             android:layout_height="48dp"
@@ -76,10 +74,10 @@
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:textColor="@color/white"
-            android:hint="Cardholder Name"
+            android:hint="@string/cardholder_name"
             android:textColorHint="@color/white"
             android:fontFamily="@font/lora_medium"
-            android:inputType="text"></EditText>
+            android:inputType="text"/>
         <EditText
             android:layout_width="320dp"
             android:layout_height="48dp"
@@ -90,10 +88,10 @@
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:textColor="@color/white"
-            android:hint="Card Number"
+            android:hint="@string/card_name"
             android:textColorHint="@color/white"
             android:fontFamily="@font/lora_medium"
-            android:inputType="text"></EditText>
+            android:inputType="text"/>
         <EditText
             android:layout_width="320dp"
             android:layout_height="48dp"
@@ -104,10 +102,10 @@
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:textColor="@color/white"
-            android:hint="Expiration Date"
+            android:hint="@string/expiration_date"
             android:textColorHint="@color/white"
             android:fontFamily="@font/lora_medium"
-            android:inputType="text"></EditText>
+            android:inputType="text"/>
         <EditText
             android:layout_width="320dp"
             android:layout_height="48dp"
@@ -118,23 +116,23 @@
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:textColor="@color/white"
-            android:hint="CVC Code"
+            android:hint="@string/cvc_code"
             android:textColorHint="@color/white"
             android:fontFamily="@font/lora_medium"
-            android:inputType="text"></EditText>
+            android:inputType="numberSigned"/>
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:layout_width="320dp"
             android:layout_height="48dp"
             android:background="@drawable/rounded_corner"
             android:layout_gravity="center"
             android:layout_marginTop="12dp"
-            android:text="Visa"
+            android:text="@string/visa_card"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:textColor="@color/white"
             android:fontFamily="@font/lora_medium"
-            android:textSize="16sp"></Switch>
+            android:textSize="16sp"/>
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="320dp"
@@ -161,7 +159,7 @@
                 android:background="@drawable/rounded_corner"
                 android:textColor="@color/white"
                 android:inputType="none"
-                android:text="Card Design"
+                android:text="@string/card_design"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>

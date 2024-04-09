@@ -11,21 +11,19 @@
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/return_icon"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-
-        ></ImageView>
+        android:layout_marginTop="10dp"/>
     <TextView
         android:layout_width="156dp"
         android:layout_height="40dp"
-        android:layout_marginStart="124dp"
         android:layout_marginTop="20dp"
-        android:text="Piggy Banks"
+        android:text="@string/piggy_banks"
         android:fontFamily="@font/lora_bold"
         android:textColor="@color/white"
         android:gravity="center"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></TextView>
+            app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <FrameLayout
         android:layout_width="48dp"
@@ -62,8 +60,7 @@
                 android:layout_height="32dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="6dp"
-
-                android:src="@drawable/piggy_icon"></ImageView>
+                android:src="@drawable/piggy_icon"/>
             <TextView
                 android:layout_width="140dp"
                 android:layout_height="20dp"
@@ -71,7 +68,7 @@
                 android:layout_marginStart="56dp"
                 android:fontFamily="@font/lora_medium"
                 android:textColor="@color/white"
-                android:text="Vacation in Europe"></TextView>
+                android:text="@string/placeholder_text"/>
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="20dp"
@@ -79,7 +76,7 @@
                 android:layout_marginStart="250dp"
                 android:fontFamily="@font/lora_medium"
                 android:textColor="@color/white"
-                android:text="3,250/8,000"></TextView>
+                android:text="3,250/8,000"/>
 
             <ProgressBar
 
@@ -106,8 +103,7 @@
                 android:layout_height="32dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="6dp"
-
-                android:src="@drawable/piggy_icon"></ImageView>
+                android:src="@drawable/piggy_icon"/>
             <TextView
                 android:layout_width="140dp"
                 android:layout_height="20dp"
@@ -115,7 +111,7 @@
                 android:layout_marginStart="56dp"
                 android:fontFamily="@font/lora_medium"
                 android:textColor="@color/white"
-                android:text="New videogame"></TextView>
+                android:text="@string/placeholder_text"/>
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="20dp"
@@ -123,7 +119,7 @@
                 android:layout_marginStart="250dp"
                 android:fontFamily="@font/lora_medium"
                 android:textColor="@color/white"
-                android:text="54,98/69,99"></TextView>
+                android:text="54,98/69,99"/>
 
             <ProgressBar
 

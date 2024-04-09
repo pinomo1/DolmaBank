@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/backgroundColor">
-    >
 
     <ImageView
         android:id="@+id/photo_frame"
@@ -27,7 +26,7 @@
         android:layout_marginBottom="664dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Welcome, Name Surname"
+        android:text="@string/welcome_name"
         android:fontFamily="@font/lora_medium"
         android:textColor="@color/white" />
 
@@ -74,7 +73,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginBottom="592dp"
         android:fontFamily="@font/lora_medium"
-        android:text="Your capital is"
+        android:text="@string/your_capital"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -194,7 +193,7 @@
                 android:layout_height="17dp"
                 android:layout_gravity="center"
                 android:textSize="12sp"
-                android:text="Transfer"
+                android:text="@string/transfer"
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:fontFamily="@font/lora_medium"
@@ -221,7 +220,7 @@
                 android:layout_height="17dp"
                 android:layout_gravity="center"
                 android:textSize="12sp"
-                android:text="Payment"
+                android:text="@string/payment"
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:fontFamily="@font/lora_medium"
@@ -248,7 +247,7 @@
                 android:layout_height="17dp"
                 android:layout_gravity="center"
                 android:textSize="12sp"
-                android:text="Piggy"
+                android:text="@string/piggy"
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:fontFamily="@font/lora_medium"
@@ -273,7 +272,7 @@
                 android:layout_height="17dp"
                 android:layout_gravity="center"
                 android:textSize="12sp"
-                android:text="Add Card"
+                android:text="@string/cards"
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:fontFamily="@font/lora_medium"
@@ -282,15 +281,15 @@
 
     </LinearLayout>
     <TextView
-        android:layout_width="99dp"
+        android:layout_width="150dp"
         android:layout_height="20dp"
         android:layout_marginStart="12dp"
         android:layout_marginBottom="132dp"
         android:fontFamily="@font/lora_medium"
-        android:text="Fast Transfer"
+        android:text="@string/fast_transfer"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"></TextView>
+        app:layout_constraintStart_toStartOf="parent"/>
     <LinearLayout
         android:layout_width="384dp"
         android:layout_height="80dp"
@@ -311,7 +310,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/tamerlan"
+                    android:src="@drawable/tamerlan"/>
             </androidx.cardview.widget.CardView>
             <TextView
                 android:layout_width="64dp"
@@ -320,8 +319,7 @@
                 android:gravity="center"
                 android:fontFamily="@font/lora_medium"
                 android:textSize="12sp"
-                android:textColor="@color/white"
-                ></TextView>
+                android:textColor="@color/white"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="64dp"
@@ -338,7 +336,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/lezgin_icon"
+                    android:src="@drawable/lezgin_icon"/>
             </androidx.cardview.widget.CardView>
             <TextView
                 android:layout_width="64dp"
@@ -347,8 +345,7 @@
                 android:gravity="center"
                 android:fontFamily="@font/lora_medium"
                 android:textSize="12sp"
-                android:textColor="@color/white"
-                ></TextView>
+                android:textColor="@color/white"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="64dp"
@@ -365,7 +362,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/gojo"
+                    android:src="@drawable/gojo"/>
             </androidx.cardview.widget.CardView>
             <TextView
                 android:layout_width="64dp"
@@ -374,8 +371,7 @@
                 android:gravity="center"
                 android:fontFamily="@font/lora_medium"
                 android:textSize="12sp"
-                android:textColor="@color/white"
-                ></TextView>
+                android:textColor="@color/white"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="64dp"
@@ -392,7 +388,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/nerd"
+                    android:src="@drawable/nerd"/>
             </androidx.cardview.widget.CardView>
             <TextView
                 android:layout_width="64dp"
@@ -401,8 +397,7 @@
                 android:gravity="center"
                 android:fontFamily="@font/lora_medium"
                 android:textSize="12sp"
-                android:textColor="@color/white"
-                ></TextView>
+                android:textColor="@color/white"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="64dp"
@@ -421,7 +416,7 @@
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/add_contact_icon"
+                    android:src="@drawable/add_contact_icon"/>
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>

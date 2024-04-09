@@ -25,8 +25,8 @@
         android:fontFamily="@font/lora_medium"
         android:gravity="center"
         android:textColor="@color/white"
-        android:text='"Never Spend Your Money Before You Have It."'
-        android:textSize="72px"
+        android:text='@string/never_spend_quote_thomas'
+        android:textSize="28sp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,13 +36,13 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="177dp"
+        android:layout_width="200dp"
         android:layout_height="49dp"
-        android:text="-Thomas Jefferson"
+        android:text="@string/thomas_jefferson"
         android:textColor="@color/white"
         android:gravity="center"
         android:fontFamily="@font/lora_medium"
-        android:textSize="48px"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,9 +56,8 @@
         android:backgroundTint="@color/white"
         android:fontFamily="@font/lora_bold"
         android:gravity="center"
-        android:onClick="startNewActivity"
         android:paddingBottom="8dp"
-        android:text="Register"
+        android:text="@string/register_button"
         android:textColor="@color/black"
         android:textSize="32sp"
         app:cornerRadius="8dp"
