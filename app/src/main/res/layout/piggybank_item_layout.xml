@@ -11,7 +11,6 @@
         android:layout_height="32dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="6dp"
-
         android:src="@drawable/piggy_icon"></ImageView>
     <TextView
         android:layout_width="140dp"
@@ -20,7 +19,7 @@
         android:layout_marginStart="56dp"
         android:fontFamily="@font/lora_medium"
         android:textColor="@color/white"
-        android:text="Vacation in Europe"></TextView>
+        android:text="@string/placeholder_text"/>
     <TextView
         android:layout_width="100dp"
         android:layout_height="20dp"
@@ -28,7 +27,7 @@
         android:layout_marginStart="250dp"
         android:fontFamily="@font/lora_medium"
         android:textColor="@color/white"
-        android:text="3,250/8,000"></TextView>
+        android:text="3,250/8,000"/>
 
     <ProgressBar
 

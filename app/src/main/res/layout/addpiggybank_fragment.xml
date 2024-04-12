@@ -22,7 +22,7 @@
         android:layout_marginTop="28dp"
         android:fontFamily="@font/lora_bold"
         android:gravity="center"
-        android:text="New Piggy Bank"
+        android:text="@string/new_piggy"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,14 +31,14 @@
     <TextView
         android:layout_width="360dp"
         android:layout_height="60dp"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="112dp"
         android:fontFamily="@font/lora_medium"
         android:gravity="center"
-        android:text="Create a new piggy bank and put a percentage of every transaction into it!"
+        android:text="@string/new_piggy_description"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
@@ -47,9 +47,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="192dp"
-        android:orientation="vertical"
-
-        >
+        android:orientation="vertical">
         <FrameLayout
             android:layout_marginTop="28dp"
             android:layout_width="380dp"
@@ -61,17 +59,19 @@
                 android:layout_height="48dp"
                 android:src="@drawable/purpose_icon"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="9dp"
-                ></ImageView>
-            <TextView
+                android:layout_marginTop="9dp"/>
+            <EditText
                 android:layout_width="300dp"
                 android:layout_height="34dp"
-                android:text="Purpose"
+                android:hint="@string/purpose_field"
+                    android:inputType="text"
+                    android:background="@color/menuColor"
+                    android:textColorHint="@color/white"
                 android:fontFamily="@font/lora_medium"
                 android:textSize="20sp"
                 android:textColor="@color/white"
                 android:layout_marginStart="72dp"
-                android:layout_marginTop="16dp"></TextView>
+                android:layout_marginTop="16dp"/>
         </FrameLayout>
         <FrameLayout
             android:layout_marginTop="28dp"
@@ -82,19 +82,21 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:src="@drawable/banknot_icon"
+                android:src="@drawable/banknote_icon"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="9dp"
-                ></ImageView>
-            <TextView
+                android:layout_marginTop="9dp"/>
+            <EditText
                 android:layout_width="300dp"
                 android:layout_height="34dp"
-                android:text="Goal"
+                    android:hint="@string/goal_field"
+                    android:background="@color/menuColor"
+                    android:textColorHint="@color/white"
+                    android:inputType="number|numberDecimal|numberSigned"
                 android:fontFamily="@font/lora_medium"
                 android:textSize="20sp"
                 android:textColor="@color/white"
                 android:layout_marginStart="72dp"
-                android:layout_marginTop="16dp"></TextView>
+                android:layout_marginTop="16dp"/>
         </FrameLayout>
         <FrameLayout
             android:layout_marginTop="28dp"
@@ -107,17 +109,19 @@
                 android:layout_height="48dp"
                 android:src="@drawable/percentage_icon"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="9dp"
-                ></ImageView>
-            <TextView
+                android:layout_marginTop="9dp"/>
+            <EditText
                 android:layout_width="300dp"
                 android:layout_height="34dp"
-                android:text="Percentage"
+                    android:hint="@string/percentage_field"
+                    android:background="@color/menuColor"
+                    android:textColorHint="@color/white"
+                    android:inputType="number|numberDecimal|numberSigned"
                 android:fontFamily="@font/lora_medium"
                 android:textSize="20sp"
                 android:textColor="@color/white"
                 android:layout_marginStart="72dp"
-                android:layout_marginTop="16dp"></TextView>
+                android:layout_marginTop="16dp"/>
         </FrameLayout>
     </LinearLayout>
 

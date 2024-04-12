@@ -32,8 +32,7 @@
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:textColor="@color/white"
-
-        android:hint="Name &amp; Surname"
+        android:hint="@string/name_and_surname"
         android:textColorHint="@color/white"
         android:fontFamily="@font/lora_medium"
         android:inputType="text"
@@ -50,7 +49,7 @@
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:textColor="@color/white"
-        android:hint="Birth Date"
+        android:hint="@string/birthday"
         android:textColorHint="@color/white"
         android:fontFamily="@font/lora_medium"
         android:inputType="date"
@@ -102,7 +101,7 @@
             android:background="@drawable/rounded_corner"
             android:textColor="@color/white"
             android:inputType="none"
-            android:text="Interface Language"
+            android:text="@string/interface_language"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -113,9 +112,8 @@
         android:backgroundTint="@color/white"
         android:fontFamily="@font/lora_bold"
         android:gravity="center"
-        android:onClick="startNewActivity"
         android:paddingBottom="8dp"
-        android:text="Start Saving"
+        android:text="@string/start_saving"
         android:textColor="@color/black"
         android:textSize="32sp"
         app:cornerRadius="8dp"
