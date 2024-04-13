@@ -5,7 +5,7 @@
         app:startDestination="@id/loadingFragment">
     <fragment
             android:id="@+id/loadingFragment"
-            android:name="com.pinomo.dolmabank.fragment.LoadingFragment"
+            android:name="com.pinomo.dolmabank.fragments.LoadingFragment"
             android:label="LoadingFragment" >
         <action
                 android:id="@+id/action_loadingFragment_to_registerLandingFragment"
@@ -13,11 +13,11 @@
     </fragment>
     <fragment
             android:id="@+id/registerFragment"
-            android:name="com.pinomo.dolmabank.fragment.RegisterFragment"
+            android:name="com.pinomo.dolmabank.fragments.RegisterFragment"
             android:label="RegisterFragment" />
     <fragment
             android:id="@+id/registerLandingFragment"
-            android:name="com.pinomo.dolmabank.fragment.RegisterLandingFragment"
+            android:name="com.pinomo.dolmabank.fragments.RegisterLandingFragment"
             android:label="RegisterLandingFragment" >
         <action
                 android:id="@+id/action_registerLandingFragment_to_registerFragment"

@@ -27,7 +27,7 @@
             app:cornerRadius ="8dp"
             android:backgroundTint="@color/menuColor"
             android:layout_gravity="center"
-            android:text="Change"
+            android:text="@string/change"
             android:gravity="center"
             android:textColor="@color/white"
             android:fontFamily="@font/lora_medium"
@@ -54,7 +54,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="16dp"
                     android:textSize="12sp"
-                    android:text="Name"
+                    android:text="@string/name_field"
                     android:fontFamily="@font/lora_medium"
                     android:textColor="@color/white"/>
                 <EditText
@@ -92,7 +92,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="16dp"
                     android:textSize="12sp"
-                    android:text="Email"
+                    android:text="@string/email_field"
                     android:fontFamily="@font/lora_medium"
                     android:textColor="@color/white"/>
                 <EditText
@@ -130,7 +130,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="16dp"
                     android:textSize="12sp"
-                    android:text="Phone"
+                    android:text="@string/phone_field"
                     android:fontFamily="@font/lora_medium"
                     android:textColor="@color/white"/>
                 <EditText
@@ -157,7 +157,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:src="@drawable/adress_icon"/>
+                android:src="@drawable/address_icon"/>
             <LinearLayout
                 android:layout_marginTop="8dp"
                 android:layout_marginStart="64dp"
@@ -168,7 +168,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="16dp"
                     android:textSize="12sp"
-                    android:text="Adress"
+                    android:text="@string/address_field"
                     android:fontFamily="@font/lora_medium"
                     android:textColor="@color/white"/>
                 <EditText
@@ -204,7 +204,7 @@
                 android:background="@drawable/rounded_corner"
                 android:textColor="@color/white"
                 android:inputType="none"
-                android:text="Interface Language"
+                android:text="@string/interface_language"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>

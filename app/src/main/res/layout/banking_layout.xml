@@ -25,7 +25,7 @@
             android:layout_height="36dp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="Dolma Banking"
+            android:text="@string/dolma_banking"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/lora_medium"
             android:textSize="24sp"
@@ -39,7 +39,7 @@
             >
             
             <LinearLayout
-                android:layout_width="85dp"
+                android:layout_width="115dp"
                 android:layout_height="28dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
@@ -49,9 +49,9 @@
                     android:layout_height="28dp"
                     android:src="@drawable/wallet_icon"/>
                 <TextView
-                    android:layout_width="57dp"
+                    android:layout_width="87dp"
                     android:layout_height="28dp"
-                    android:text="Wallet"
+                    android:text="@string/wallet"
                     android:textSize="16sp"
                     android:gravity="center"
                     android:fontFamily="@font/lora_medium"

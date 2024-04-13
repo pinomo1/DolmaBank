@@ -35,4 +35,7 @@
     <string name="cards">Карты</string>
     <string name="your_capital">Ваш бюджет:</string>
     <string name="welcome_name">Добро пожаловать, %s</string>
+    <string name="dolma_banking">Dolma Банкинг</string>
+    <string name="wallet">Кошелёк</string>
+    <string name="change">Изменить</string>
 </resources>

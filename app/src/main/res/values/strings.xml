@@ -37,5 +37,8 @@
     <string name="cards">Cards</string>
     <string name="your_capital">Your capital is</string>
     <string name="welcome_name">Welcome, %s</string>
+    <string name="dolma_banking">Dolma Banking</string>
+    <string name="wallet">Wallet</string>
+    <string name="change">Change</string>
 
 </resources>

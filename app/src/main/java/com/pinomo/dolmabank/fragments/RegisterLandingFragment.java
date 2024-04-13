@@ -1,4 +1,4 @@
-package com.pinomo.dolmabank.fragment;
+package com.pinomo.dolmabank.fragments;
 
 import static androidx.navigation.fragment.FragmentKt.findNavController;
 
