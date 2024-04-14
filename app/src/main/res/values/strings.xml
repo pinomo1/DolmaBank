@@ -1,3 +1,55 @@
 <resources>
-    <string name="app_name">DolmaBank</string>
+    <string name="app_name" translatable="false">DolmaBank</string>
+    <string name="select">Select Item</string>
+    <string name="title_activity_register" translatable="false">RegisterActivity</string>
+    <string name="thomas_jefferson">-Thomas Jefferson</string>
+    <string name="never_spend_quote_thomas">\"Never Spend Your Money Before You Have It.\"</string>
+    <string name="register_button">Register</string>
+    <string name="add_new_contact">Add new contact</string>
+    <string name="name_field">Name</string>
+    <string name="email_field">Email</string>
+    <string name="phone_field">Phone number</string>
+    <string name="address_field">Address</string>
+    <string name="preview_card">Preview</string>
+    <string name="add_new_card">Add new card</string>
+    <string name="name_of_bank">Name of bank</string>
+    <string name="cardholder_name">Cardholder name</string>
+    <string name="card_name">Card name</string>
+    <string name="expiration_date">Expiration date</string>
+    <string name="cvc_code">CVC code</string>
+    <string name="visa_card" translatable="false">Visa</string>
+    <string name="card_design">Card design</string>
+    <string name="new_piggy">New piggy bank</string>
+    <string name="new_piggy_description">Create a new piggy bank and put a percentage of every transaction into it!</string>
+    <string name="purpose_field">Purpose</string>
+    <string name="goal_field">Goal</string>
+    <string name="percentage_field">Percentage</string>
+    <string name="placeholder_text">Lorem ipsum</string>
+    <string name="piggy_banks">Piggy banks</string>
+    <string name="start_saving">Start saving</string>
+    <string name="interface_language">Interface language</string>
+    <string name="birthday">Birthday</string>
+    <string name="name_and_surname">Name and Surname</string>
+    <string name="fast_transfer">Fast transfer</string>
+    <string name="transfer">Transfer</string>
+    <string name="payment">Payment</string>
+    <string name="piggy">Piggy</string>
+    <string name="cards">Cards</string>
+    <string name="your_capital">Your capital is</string>
+    <string name="welcome_name">Welcome, %s</string>
+    <string name="dolma_banking">Dolma Banking</string>
+    <string name="wallet">Wallet</string>
+    <string name="change">Change</string>
+    <string name="banking">Banking</string>
+    <string name="history">History</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="that_same">That\'s the same amount you have spend yesterday</string>
+    <string name="that_more">That\'s %s more than you spent yesterday</string>
+    <string name="that_less">That\'s %s less than you spent yesterday</string>
+    <string name="today_spent">Today you\'ve spent...</string>
+    <string name="no_card_yet">No card yet</string>
+    <string name="save">Save</string>
+    <string name="card_number">Card number</string>
+
 </resources>

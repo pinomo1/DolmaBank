@@ -7,9 +7,12 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-@Database(entities = {LocalBankTransaction.class}, version = 1, exportSchema = false)
+@Database(entities = {LocalBankTransaction.class, LocalUser.class, LocalUserContact.class, LocalBankCard.class}, version = 1, exportSchema = false)
 abstract public class DolmaBankDatabase extends RoomDatabase {
-    abstract LocalBankTransaction getLocalBankTransactionDao();
+    public abstract LocalBankTransactionDao getLocalBankTransactionDao();
+    public abstract LocalUserDao getLocalUserDao();
+    public abstract LocalUserContactDao getLocalUserContactDao();
+    public abstract LocalBankCardDao getLocalBankCardDao();
 
     @Nullable
     private static DolmaBankDatabase INSTANCE = null;

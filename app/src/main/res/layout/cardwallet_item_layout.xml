@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="328dp"
+    android:layout_height="50dp"
+    android:background="@color/backgroundColor">
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:src="@drawable/img"
+        />
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp">
+        <TextView
+                android:id="@+id/card_name"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:text="Yarpaq Dolma"
+            android:fontFamily="@font/lora_bold"/>
+        <TextView
+                android:id="@+id/card_balance"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:text="$13,874.00"
+            android:fontFamily="@font/lora_medium"/>
+    </LinearLayout>
+    <TextView
+            android:id="@+id/card_ending"
+        android:layout_marginStart="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="•••• 5931"
+        android:fontFamily="@font/lora_medium"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/white"/>
+
+</LinearLayout>
