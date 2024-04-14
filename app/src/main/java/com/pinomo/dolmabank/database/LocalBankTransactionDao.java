@@ -8,6 +8,9 @@ import androidx.room.Update;
 
 import java.util.List;
 
+/**
+ * The interface Local bank transaction dao.
+ */
 @Dao
 public interface LocalBankTransactionDao extends BaseLocalEntityDao<LocalBankTransaction>
 {

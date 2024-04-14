@@ -15,11 +15,18 @@ import com.pinomo.dolmabank.DolmaBankApp;
 import com.pinomo.dolmabank.R;
 import com.pinomo.dolmabank.database.LocalBankCard;
 import com.pinomo.dolmabank.databinding.AddCardFragmentBinding;
-import com.pinomo.dolmabank.databinding.RegisterLandingFragmentBinding;
 import com.pinomo.dolmabank.models.BankCard;
 import com.pinomo.dolmabank.utils.crypto.CryptoUtils;
 
+/**
+ * Fragment for adding a new card to the user's account
+ */
 public class AddCardFragment extends Fragment {
+    /**
+     * Gets binding.
+     *
+     * @return the binding
+     */
     @NonNull
     public AddCardFragmentBinding getBinding() {
         assert _binding != null;
@@ -29,6 +36,9 @@ public class AddCardFragment extends Fragment {
     @Nullable
     private AddCardFragmentBinding _binding = null;
 
+    /**
+     * Instantiates a new Add card fragment.
+     */
     public AddCardFragment() {
         super(R.layout.add_card_fragment);
     }
@@ -65,11 +75,11 @@ public class AddCardFragment extends Fragment {
 
             DolmaBankApp app = (DolmaBankApp) requireActivity().getApplication();
             BankCard bankCard = new BankCard();
-            bankCard.cardNumber = CryptoUtils.Companion.encrypt(cardNumber);
-            bankCard.cvv = CryptoUtils.Companion.encrypt(cvv);
-            bankCard.bankName = CryptoUtils.Companion.encrypt(bankName);
-            bankCard.cardHolderName = CryptoUtils.Companion.encrypt(cardHolder);
-            bankCard.cardName = CryptoUtils.Companion.encrypt(cardName);
+            bankCard.cardNumber = CryptoUtils.encrypt(cardNumber);
+            bankCard.cvv = CryptoUtils.encrypt(cvv);
+            bankCard.bankName = CryptoUtils.encrypt(bankName);
+            bankCard.cardHolderName = CryptoUtils.encrypt(cardHolder);
+            bankCard.cardName = CryptoUtils.encrypt(cardName);
             bankCard.balance = getRandBalance();
             LocalBankCard localBankCard = new LocalBankCard();
             localBankCard.bankCard = bankCard;
@@ -81,14 +91,27 @@ public class AddCardFragment extends Fragment {
         return view;
     }
 
+    /**
+     * Generates a random balance for the card
+     * @return Random balance from 0 to 10000
+     */
     private Double getRandBalance(){
         return Math.random() * 10000;
     }
 
+    /**
+     * Checks if the card number is valid
+     * @return True if the card number is valid, false otherwise
+     */
     private boolean isCardNumberValid(){
         return getBinding().cardNumber.getText().toString().length() == 16;
     }
 
+
+    /**
+     * Checks if the cvv code is valid
+     * @return True if the cvv code is valid, false otherwise
+     */
     private boolean isCvvValid(){
         return getBinding().cvcCode.getText().toString().length() == 3;
     }

@@ -1,7 +1,5 @@
 package com.pinomo.dolmabank.fragments;
 
-import static androidx.navigation.fragment.FragmentKt.findNavController;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -26,7 +24,15 @@ import com.pinomo.dolmabank.models.User;
 import com.pinomo.dolmabank.utils.AppUtils;
 import com.pinomo.dolmabank.utils.crypto.CryptoUtils;
 
+/**
+ * A simple {@link Fragment} subclass.
+ */
 public class HomescreenFragment extends Fragment {
+    /**
+     * Gets binding.
+     *
+     * @return the binding
+     */
     @NonNull
     public HomescreenFragmentBinding getBinding() {
         assert _binding != null;
@@ -36,6 +42,9 @@ public class HomescreenFragment extends Fragment {
     @Nullable
     private HomescreenFragmentBinding _binding = null;
 
+    /**
+     * Instantiates a new Homescreen fragment.
+     */
     public HomescreenFragment() {
         super(R.layout.homescreen_fragment);
     }
@@ -50,15 +59,15 @@ public class HomescreenFragment extends Fragment {
         LocalUserDao userDao = app.getDb().getLocalUserDao();
         LocalUser localUser = userDao.getFirst();
         User user = localUser.user;
-        getBinding().username.setText(getString(R.string.welcome_name, CryptoUtils.Companion.decrypt(user.name)));
+        getBinding().username.setText(getString(R.string.welcome_name, CryptoUtils.decrypt(user.name)));
 
         LocalBankCardDao bankCardDao = app.getDb().getLocalBankCardDao();
         LocalBankCard localBankCard = bankCardDao.getFirst();
         if (localBankCard != null) {
             BankCard bankCard = localBankCard.bankCard;
             getBinding().noCardYet.setVisibility(View.GONE);
-            getBinding().cardBankName.setText(CryptoUtils.Companion.decrypt(bankCard.bankName));
-            String cardNum = CryptoUtils.Companion.decrypt(bankCard.cardNumber);
+            getBinding().cardBankName.setText(CryptoUtils.decrypt(bankCard.bankName));
+            String cardNum = CryptoUtils.decrypt(bankCard.cardNumber);
             StringBuilder formattedCardNum = new StringBuilder();
             for (int i = 0; i < cardNum.length(); i++) {
                 if (i % 4 == 0 && i != 0) {
@@ -67,8 +76,8 @@ public class HomescreenFragment extends Fragment {
                 formattedCardNum.append(cardNum.charAt(i));
             }
             getBinding().cardId.setText(formattedCardNum.toString());
-            getBinding().usernameCardId.setText(CryptoUtils.Companion.decrypt(bankCard.cardHolderName));
-            getBinding().cvvNumberId.setText(CryptoUtils.Companion.decrypt(bankCard.cvv));
+            getBinding().usernameCardId.setText(CryptoUtils.decrypt(bankCard.cardHolderName));
+            getBinding().cvvNumberId.setText(CryptoUtils.decrypt(bankCard.cvv));
         }
         else{
             FrameLayout frameLayout = getBinding().frameLayout;

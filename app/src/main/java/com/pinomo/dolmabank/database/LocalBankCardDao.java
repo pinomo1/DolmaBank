@@ -9,12 +9,25 @@ import androidx.room.Update;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Data Access Object for LocalBankCard entity
+ */
 @Dao
 public interface LocalBankCardDao extends BaseLocalEntityDao<LocalBankCard>
 {
+    /**
+     * Get the first bank card in the database
+     *
+     * @return The first bank card
+     */
     @Query("SELECT * FROM LocalBankCard LIMIT 1")
     LocalBankCard getFirst();
 
+    /**
+     * Get the overall balance of all bank cards
+     *
+     * @return The overall balance
+     */
     @Query("SELECT COALESCE(SUM(balance), 0) FROM LocalBankCard")
     Double getOverallBalance();
 

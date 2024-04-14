@@ -29,7 +29,15 @@ import com.pinomo.dolmabank.models.BankCard;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A simple {@link Fragment} subclass.
+ */
 public class BankingFragment extends Fragment {
+    /**
+     * Gets binding.
+     *
+     * @return the binding
+     */
     @NonNull
     public BankingFragmentBinding getBinding() {
         assert _binding != null;
@@ -44,6 +52,9 @@ public class BankingFragment extends Fragment {
     private CardsRecyclerAdapter infoAdapter;
     private List<CardsRecyclerViewItem> cardArrayList;
 
+    /**
+     * Instantiates a new Banking fragment.
+     */
     public BankingFragment() {
         super(R.layout.banking_fragment);
         cardArrayList = new ArrayList<>();

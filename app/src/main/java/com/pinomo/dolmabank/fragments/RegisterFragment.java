@@ -8,8 +8,6 @@ import static com.pinomo.dolmabank.utils.LanguageUtils.getLanguages;
 import static com.pinomo.dolmabank.utils.LanguageUtils.setLanguage;
 
 import android.app.DatePickerDialog;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -21,17 +19,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 
 import  android.view.View;
 import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.pinomo.dolmabank.DolmaBankApp;
-import com.pinomo.dolmabank.MainActivity;
 import com.pinomo.dolmabank.R;
 import com.pinomo.dolmabank.adapters.CustomArrayAdapter;
 import com.pinomo.dolmabank.database.LocalUser;
@@ -45,11 +40,16 @@ import com.pinomo.dolmabank.utils.crypto.CryptoUtils;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
-import java.util.Objects;
-import java.util.concurrent.CompletableFuture;
 
-
+/**
+ * Fragment for registering a new user
+ */
 public class RegisterFragment extends Fragment {
+    /**
+     * Gets binding.
+     *
+     * @return the binding
+     */
     @NonNull
     public RegisterFragmentBinding getBinding() {
         assert _binding != null;
@@ -59,17 +59,35 @@ public class RegisterFragment extends Fragment {
     @Nullable
     private RegisterFragmentBinding _binding = null;
 
+    /**
+     * The My calendar.
+     */
     final Calendar myCalendar = Calendar.getInstance();
 
+    /**
+     * Instantiates a new Register fragment.
+     */
     public RegisterFragment() {
         super(R.layout.register_fragment);
     }
 
+    /**
+     * The Languages.
+     */
     String[] languages = getLanguages();
+    /**
+     * The Selected language.
+     */
     String selectedLanguage;
 
+    /**
+     * The Auto complete txt.
+     */
     AutoCompleteTextView autoCompleteTxt;
 
+    /**
+     * The Adapter languages.
+     */
     ArrayAdapter<String> adapterLanguages;
 
     @Nullable
@@ -140,7 +158,7 @@ public class RegisterFragment extends Fragment {
                 String name = getBinding().name.getText().toString();
 
                 User user = new User();
-                user.name = CryptoUtils.Companion.encrypt(name);
+                user.name = CryptoUtils.encrypt(name);
                 user.yearOfBirth = myCalendarYear;
                 user.monthOfBirth = myCalendarMonth;
                 user.dayOfBirth = myCalendarDay;

@@ -1,15 +1,11 @@
 package com.pinomo.dolmabank.fragments;
 
-import static androidx.navigation.fragment.FragmentKt.findNavController;
-
 import static com.pinomo.dolmabank.utils.LanguageUtils.getIconResource;
 import static com.pinomo.dolmabank.utils.LanguageUtils.getLanguageCode;
 import static com.pinomo.dolmabank.utils.LanguageUtils.getLanguages;
 import static com.pinomo.dolmabank.utils.LanguageUtils.saveLanguage;
 import static com.pinomo.dolmabank.utils.LanguageUtils.setLanguage;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -33,13 +29,24 @@ import com.pinomo.dolmabank.models.User;
 import com.pinomo.dolmabank.utils.LanguageUtils;
 import com.pinomo.dolmabank.utils.crypto.CryptoUtils;
 
+/**
+ * Fragment for the profile page
+ */
 public class ProfileFragment extends Fragment {
+    /**
+     * Gets binding.
+     *
+     * @return the binding
+     */
     @NonNull
     public ProfileFragmentBinding getBinding() {
         assert _binding != null;
         return _binding;
     }
 
+    /**
+     * Instantiates a new Profile fragment.
+     */
     public ProfileFragment() {
         super(R.layout.profile_fragment);
     }
@@ -49,11 +56,23 @@ public class ProfileFragment extends Fragment {
 
     private boolean isEditing = false;
 
+    /**
+     * The Languages.
+     */
     String[] languages = getLanguages();
+    /**
+     * The Selected language.
+     */
     String selectedLanguage;
 
+    /**
+     * The Auto complete txt.
+     */
     AutoCompleteTextView autoCompleteTxt;
 
+    /**
+     * The Adapter languages.
+     */
     ArrayAdapter<String> adapterLanguages;
 
     @Nullable
@@ -75,10 +94,10 @@ public class ProfileFragment extends Fragment {
                 LocalUserDao userDao = app.getDb().getLocalUserDao();
                 LocalUser localUser = userDao.getFirst();
                 User user = localUser.user;
-                user.name = CryptoUtils.Companion.encrypt(getBinding().nameField.getText().toString());
-                user.email = CryptoUtils.Companion.encrypt(getBinding().emailField.getText().toString());
-                user.phoneNumber = CryptoUtils.Companion.encrypt(getBinding().phoneField.getText().toString());
-                user.address = CryptoUtils.Companion.encrypt(getBinding().addressField.getText().toString());
+                user.name = CryptoUtils.encrypt(getBinding().nameField.getText().toString());
+                user.email = CryptoUtils.encrypt(getBinding().emailField.getText().toString());
+                user.phoneNumber = CryptoUtils.encrypt(getBinding().phoneField.getText().toString());
+                user.address = CryptoUtils.encrypt(getBinding().addressField.getText().toString());
                 userDao.update(localUser);
             }
         });
@@ -87,19 +106,19 @@ public class ProfileFragment extends Fragment {
         LocalUserDao userDao = app.getDb().getLocalUserDao();
         LocalUser localUser = userDao.getFirst();
         User user = localUser.user;
-        getBinding().nameField.setText(CryptoUtils.Companion.decrypt(user.name));
+        getBinding().nameField.setText(CryptoUtils.decrypt(user.name));
         if (user.email == null){
             user.email = "";
         }
-        getBinding().emailField.setText(CryptoUtils.Companion.decrypt(user.email));
+        getBinding().emailField.setText(CryptoUtils.decrypt(user.email));
         if (user.phoneNumber == null){
             user.phoneNumber = "";
         }
-        getBinding().phoneField.setText(CryptoUtils.Companion.decrypt(user.phoneNumber));
+        getBinding().phoneField.setText(CryptoUtils.decrypt(user.phoneNumber));
         if (user.address == null){
             user.address = "";
         }
-        getBinding().addressField.setText(CryptoUtils.Companion.decrypt(user.address));
+        getBinding().addressField.setText(CryptoUtils.decrypt(user.address));
 
         autoCompleteTxt = getBinding().autoCompleteTxt;
         adapterLanguages = new CustomArrayAdapter(getContext(), R.layout.dropdown_item_layout, languages);

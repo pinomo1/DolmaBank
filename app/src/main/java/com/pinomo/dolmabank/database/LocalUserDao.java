@@ -8,9 +8,17 @@ import androidx.room.Update;
 
 import java.util.List;
 
+/**
+ * The interface Local user dao.
+ */
 @Dao
 public interface LocalUserDao extends BaseLocalEntityDao<LocalUser>
 {
+    /**
+     * Gets first.
+     *
+     * @return the first
+     */
     @Query("SELECT * FROM LocalUser LIMIT 1")
     LocalUser getFirst();
 

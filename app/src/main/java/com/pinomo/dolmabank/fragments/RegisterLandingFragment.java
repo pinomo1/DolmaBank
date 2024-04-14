@@ -14,7 +14,15 @@ import androidx.fragment.app.Fragment;
 import com.pinomo.dolmabank.R;
 import com.pinomo.dolmabank.databinding.RegisterLandingFragmentBinding;
 
+/**
+ * First fragment that the user sees when they open the app.
+ */
 public class RegisterLandingFragment extends Fragment {
+    /**
+     * Gets binding.
+     *
+     * @return the binding
+     */
     @NonNull
     public RegisterLandingFragmentBinding getBinding() {
         assert _binding != null;
@@ -24,6 +32,9 @@ public class RegisterLandingFragment extends Fragment {
     @Nullable
     private RegisterLandingFragmentBinding _binding = null;
 
+    /**
+     * Instantiates a new Register landing fragment.
+     */
     public RegisterLandingFragment() {
         super(R.layout.register_landing_fragment);
     }
