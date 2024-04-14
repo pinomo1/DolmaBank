@@ -10,7 +10,16 @@ import com.pinomo.dolmabank.R;
 
 import java.util.Locale;
 
+/**
+ * The type Language utils.
+ */
 public class LanguageUtils {
+    /**
+     * Gets language code.
+     *
+     * @param language the language
+     * @return the language code
+     */
     public static String getLanguageCode(String language) {
         return switch (language) {
             case "Russian" -> "ru";
@@ -23,6 +32,12 @@ public class LanguageUtils {
         };
     }
 
+    /**
+     * Gets icon resource.
+     *
+     * @param selectedItem the selected item
+     * @return the icon resource
+     */
     public static int getIconResource(String selectedItem) {
         return switch (selectedItem) {
             case "Russian" -> R.drawable.ic_russian;
@@ -35,6 +50,12 @@ public class LanguageUtils {
         };
     }
 
+    /**
+     * Gets name by code.
+     *
+     * @param code the code
+     * @return the name by code
+     */
     public static String getNameByCode(String code) {
         return switch (code) {
             case "ru" -> "Russian";
@@ -47,23 +68,51 @@ public class LanguageUtils {
         };
     }
 
+    /**
+     * Gets current language code.
+     *
+     * @param activity the activity
+     * @return the current language code
+     */
     public static String getCurrentLanguageCode(Activity activity) {
         SharedPreferences sharedPref = activity.getPreferences(Context.MODE_PRIVATE);
         return sharedPref.getString("language", "en");
     }
 
+    /**
+     * Gets current language.
+     *
+     * @param activity the activity
+     * @return the current language
+     */
     public static String getCurrentLanguage(Activity activity) {
         return getNameByCode(getCurrentLanguageCode(activity));
     }
 
+    /**
+     * Get languages string [ ].
+     *
+     * @return the string [ ]
+     */
     public static String[] getLanguages() {
         return new String[] {"Russian","English","Ukrainian","Azerbaijani","French","Deutsch"};
     }
 
+    /**
+     * Sets language.
+     *
+     * @param activity the activity
+     */
     public static void setLanguage(Activity activity) {
         setLanguage(activity, getCurrentLanguageCode(activity));
     }
 
+    /**
+     * Sets language.
+     *
+     * @param activity the activity
+     * @param language the language
+     */
     public static void setLanguage(Activity activity, String language) {
         Locale locale = new Locale(language);
         Locale.setDefault(locale);
@@ -73,6 +122,12 @@ public class LanguageUtils {
         resources.updateConfiguration(config, resources.getDisplayMetrics());
     }
 
+    /**
+     * Save language.
+     *
+     * @param activity the activity
+     * @param language the language
+     */
     public static void saveLanguage(Activity activity, String language) {
         SharedPreferences sharedPref = activity.getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
@@ -80,6 +135,13 @@ public class LanguageUtils {
         editor.apply();
     }
 
+    /**
+     * Gets string.
+     *
+     * @param activity the activity
+     * @param resId    the res id
+     * @return the string
+     */
     public static String getString(Activity activity, int resId) {
         return activity.getResources().getString(resId);
     }

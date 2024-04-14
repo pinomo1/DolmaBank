@@ -1,7 +1,5 @@
 package com.pinomo.dolmabank;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -27,9 +25,25 @@ import java.util.List;
 import java.util.Objects;
 import java.util.function.Consumer;
 
+/**
+ * Main activity of the app. It is responsible for controlling the navigation between fragments.
+ */
 public class MainActivity extends AppCompatActivity {
+
+    /**
+     * The binding object of the main activity.
+     */
     private ActivityMainBinding binding;
+
+    /**
+     * The navigation controller of the main activity.
+     */
     private NavController navController;
+
+    /**
+     * Loads the user data from the database.
+     * @param callback The callback function to be executed after the user data is loaded.
+     */
 
     private void loadUserData(Consumer<LocalUser> callback) {
         DolmaBankApp app = (DolmaBankApp) this.getApplication();
@@ -38,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
         callback.accept(user);
     }
 
+    /**
+     * Controls the visibility of the navigation bar.
+     */
     private void controlNavBarVisibility(){
         List<Integer> noNavBarFragments = List.of(
                 R.id.registerLandingFragment,
@@ -62,6 +79,13 @@ public class MainActivity extends AppCompatActivity {
         );
     }
 
+    /**
+     * Called when the activity is starting.
+     * @param savedInstanceState If the activity is being re-initialized after
+     *     previously being shut down then this Bundle contains the data it most
+     *     recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+     *
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
             public void handleOnBackPressed() {
             }
         });
-        CryptoUtils.Companion.loadCryptoFunction(this);
+        CryptoUtils.loadCryptoFunction(this);
 
         LanguageUtils.setLanguage(this);
 
@@ -102,6 +126,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Customizes the status bar and the theme of the activity.
+     */
     private void customizeStatusBarAndTheme() {
         EdgeToEdge.enable(this);
 //        getWindow().setFlags(

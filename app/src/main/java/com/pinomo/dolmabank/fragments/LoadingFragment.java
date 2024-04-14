@@ -12,16 +12,27 @@ import androidx.fragment.app.Fragment;
 import com.pinomo.dolmabank.R;
 import com.pinomo.dolmabank.databinding.LoadingFragmentBinding;
 
+/**
+ * Fragment that displays a loading animation.
+ */
 public class LoadingFragment extends Fragment {
     @Nullable
     private LoadingFragmentBinding _binding = null;
 
+    /**
+     * Gets binding.
+     *
+     * @return the binding
+     */
     @NonNull
     public LoadingFragmentBinding getBinding() {
         assert _binding != null;
         return _binding;
     }
 
+    /**
+     * Instantiates a new Loading fragment.
+     */
     public LoadingFragment() {
         super(R.layout.loading_fragment);
     }

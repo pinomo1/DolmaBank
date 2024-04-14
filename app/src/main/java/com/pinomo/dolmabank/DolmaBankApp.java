@@ -10,9 +10,21 @@ import com.pinomo.dolmabank.database.DolmaBankDatabase;
 
 import java.util.Locale;
 
+/**
+ * Application class for DolmaBank
+ */
 public class DolmaBankApp extends Application {
+
+    /**
+     * Database instance
+     */
     DolmaBankDatabase db;
 
+    /**
+     * Get the database instance
+     *
+     * @return the database instance
+     */
     public DolmaBankDatabase getDb() {
         return db;
     }
