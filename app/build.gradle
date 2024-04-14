@@ -40,6 +40,8 @@ dependencies {
     def room_version = "2.6.1"
 
     implementation libs.room.runtime
+    // Uncomment this line if you want to use JavaDoc
+    // implementation files("C:/MyPrograms/AndroidSdk/platforms/android-34/android.jar")
 
     ksp "androidx.room:room-compiler:$room_version"
 
