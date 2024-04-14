@@ -8,10 +8,10 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <TextView
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:text="History"
+                android:text="@string/history"
                 android:layout_marginTop="16dp"
                 android:gravity="center"
                 android:textColor="@color/white"
@@ -30,7 +30,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
-                    android:text="Today you spent"
+                    android:text="@string/today_spent"
                     android:textColor="@color/white"
                     android:textSize="16sp"
                     android:fontFamily="@font/lora_medium"/>
@@ -48,7 +48,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="4dp"
-                    android:text="This is $24.20 more than yesterday"
+                    android:text="@string/placeholder_text"
                     android:textColor="#FF8383"
                     android:textSize="16sp"
                     android:fontFamily="@font/lora_medium"/>

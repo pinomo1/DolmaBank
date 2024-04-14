@@ -4,15 +4,16 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update;
 
-import java.util.ArrayList;
+import java.util.List;
 
 @Dao
-interface LocalBankTransactionDao extends BaseLocalEntityDao<LocalBankTransaction>
+public interface LocalBankTransactionDao extends BaseLocalEntityDao<LocalBankTransaction>
 {
     @Override
     @Query("SELECT * FROM LocalBankTransaction")
-    ArrayList<LocalBankTransaction> getAll();
+    List<LocalBankTransaction> getAll();
 
     @Override
     @Query("SELECT * FROM LocalBankTransaction WHERE uid = :uid")
@@ -25,4 +26,8 @@ interface LocalBankTransactionDao extends BaseLocalEntityDao<LocalBankTransactio
     @Override
     @Delete
     void delete(LocalBankTransaction entity);
+
+    @Override
+    @Update
+    void update(LocalBankTransaction entity);
 }

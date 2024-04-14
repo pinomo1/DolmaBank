@@ -40,5 +40,16 @@
     <string name="dolma_banking">Dolma Banking</string>
     <string name="wallet">Wallet</string>
     <string name="change">Change</string>
+    <string name="banking">Banking</string>
+    <string name="history">History</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="that_same">That\'s the same amount you have spend yesterday</string>
+    <string name="that_more">That\'s %s more than you spent yesterday</string>
+    <string name="that_less">That\'s %s less than you spent yesterday</string>
+    <string name="today_spent">Today you\'ve spent...</string>
+    <string name="no_card_yet">No card yet</string>
+    <string name="save">Save</string>
+    <string name="card_number">Card number</string>
 
 </resources>

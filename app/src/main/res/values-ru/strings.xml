@@ -34,8 +34,19 @@
     <string name="piggy">Копилка</string>
     <string name="cards">Карты</string>
     <string name="your_capital">Ваш бюджет:</string>
-    <string name="welcome_name">Добро пожаловать, %s</string>
+    <string name="welcome_name">%s</string>
     <string name="dolma_banking">Dolma Банкинг</string>
     <string name="wallet">Кошелёк</string>
     <string name="change">Изменить</string>
+    <string name="banking">Банкинг</string>
+    <string name="history">История</string>
+    <string name="home">Дом. страница</string>
+    <string name="profile">Профиль</string>
+    <string name="that_same">Столько же сколько Вы потратили вчера</string>
+    <string name="that_more">Это на %s больше чем Вы потратили вчера</string>
+    <string name="that_less">Это на %s меньше чем Вы потратили вчера</string>
+    <string name="today_spent">Сегодня вы потратили...</string>
+    <string name="no_card_yet">Нет карт</string>
+    <string name="save">Сохранить</string>
+    <string name="card_number">Номер карты</string>
 </resources>

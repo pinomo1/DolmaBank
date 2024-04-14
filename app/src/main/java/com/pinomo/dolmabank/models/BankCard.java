@@ -1,12 +1,13 @@
 package com.pinomo.dolmabank.models;
 
 final public class BankCard extends PayloadEntity {
-    String cardNumber;
-    String cardHolderName;
-    String expirationDate;
-    String cvv;
-    String bankName;
-    Double balance;
-    String currency;
-    String cardType;
+    public String cardNumber;
+    public String cardHolderName;
+    // public String expirationDate;
+    public String cvv;
+    public String bankName;
+    public Double balance;
+    public String cardName;
+    // public String currency;
+    // public String cardType;
 }

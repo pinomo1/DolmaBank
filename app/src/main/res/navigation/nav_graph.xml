@@ -10,11 +10,18 @@
         <action
                 android:id="@+id/action_loadingFragment_to_registerLandingFragment"
                 app:destination="@id/registerLandingFragment" />
+        <action
+                android:id="@+id/action_loadingFragment_to_homescreenFragment"
+                app:destination="@id/homescreen" />
     </fragment>
     <fragment
             android:id="@+id/registerFragment"
             android:name="com.pinomo.dolmabank.fragments.RegisterFragment"
-            android:label="RegisterFragment" />
+            android:label="RegisterFragment" >
+        <action
+                android:id="@+id/action_registerFragment_to_homescreenFragment"
+                app:destination="@id/homescreen" />
+    </fragment>
     <fragment
             android:id="@+id/registerLandingFragment"
             android:name="com.pinomo.dolmabank.fragments.RegisterLandingFragment"
@@ -22,5 +29,29 @@
         <action
                 android:id="@+id/action_registerLandingFragment_to_registerFragment"
                 app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/homescreen"
+            android:name="com.pinomo.dolmabank.fragments.HomescreenFragment"
+            android:label="HomescreenFragment" />
+    <fragment
+            android:id="@+id/profile"
+            android:name="com.pinomo.dolmabank.fragments.ProfileFragment"
+            android:label="ProfileFragment" />
+    <fragment
+            android:id="@+id/banking"
+            android:name="com.pinomo.dolmabank.fragments.BankingFragment"
+            android:label="BankingFragment" >
+        <action
+                android:id="@+id/action_banking_to_addCardFragment"
+                app:destination="@id/addCardFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/addCardFragment"
+            android:name="com.pinomo.dolmabank.fragments.AddCardFragment"
+            android:label="AddCardFragment" >
+        <action
+                android:id="@+id/action_addCardFragment_to_banking"
+                app:destination="@id/banking" />
     </fragment>
 </navigation>

@@ -10,4 +10,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="backgroundColor">#151515</color>
     <color name="menuColor">#303030</color>
+
+    <color name="lightGray">#FFCCCCCC</color>
+    <color name="transparent">#00000000</color>
 </resources>

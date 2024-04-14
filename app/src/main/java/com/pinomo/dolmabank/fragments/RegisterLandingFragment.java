@@ -24,6 +24,10 @@ public class RegisterLandingFragment extends Fragment {
     @Nullable
     private RegisterLandingFragmentBinding _binding = null;
 
+    public RegisterLandingFragment() {
+        super(R.layout.register_landing_fragment);
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

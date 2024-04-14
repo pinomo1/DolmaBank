@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/homescreen"
+            android:icon="@drawable/home_selector"
+            android:title="@string/home" />
+    <item
+            android:id="@+id/banking"
+            android:icon="@drawable/bank_selector"
+            android:title="@string/banking" />
+    <item
+            android:id="@+id/history"
+            android:icon="@drawable/history_selector"
+            android:title="@string/history" />
+    <item
+            android:id="@+id/profile"
+            android:icon="@drawable/profile_selector"
+            android:title="@string/profile" />
+</menu>
