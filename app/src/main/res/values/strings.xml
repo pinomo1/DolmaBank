@@ -47,7 +47,7 @@
     <string name="that_same">That\'s the same amount you have spend yesterday</string>
     <string name="that_more">That\'s %s more than you spent yesterday</string>
     <string name="that_less">That\'s %s less than you spent yesterday</string>
-    <string name="today_spent">Today you\'ve spent...</string>
+    <string name="today_got">Today you\'ve got...</string>
     <string name="no_card_yet">No card yet</string>
     <string name="save">Save</string>
     <string name="card_number">Card number</string>

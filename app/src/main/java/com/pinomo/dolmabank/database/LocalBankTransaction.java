@@ -18,5 +18,5 @@ public non-sealed class LocalBankTransaction extends LocalPayloadEntity {
      * The Transaction.
      */
     @Embedded
-    BankTransaction transaction;
+    public BankTransaction transaction;
 }

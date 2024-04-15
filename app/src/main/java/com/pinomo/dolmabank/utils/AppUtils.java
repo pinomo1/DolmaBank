@@ -14,6 +14,9 @@ public class AppUtils {
      * @return the string
      */
     public static String formatBalance(double balance) {
+        if (balance < 0) {
+            return "-$" + String.format("%1$,.2f", -balance);
+        }
         return "$" + String.format("%1$,.2f", balance);
     }
 

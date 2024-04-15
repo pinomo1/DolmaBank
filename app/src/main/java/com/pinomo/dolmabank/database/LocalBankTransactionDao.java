@@ -14,6 +14,9 @@ import java.util.List;
 @Dao
 public interface LocalBankTransactionDao extends BaseLocalEntityDao<LocalBankTransaction>
 {
+    @Query("SELECT COALESCE(SUM(amount), 0) FROM LocalBankTransaction")
+    Double totalAmount();
+
     @Override
     @Query("SELECT * FROM LocalBankTransaction")
     List<LocalBankTransaction> getAll();

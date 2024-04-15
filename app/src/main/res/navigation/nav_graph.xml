@@ -54,4 +54,8 @@
                 android:id="@+id/action_addCardFragment_to_banking"
                 app:destination="@id/banking" />
     </fragment>
+    <fragment
+            android:id="@+id/history"
+            android:name="com.pinomo.dolmabank.fragments.HistoryFragment"
+            android:label="HistoryFragment" />
 </navigation>

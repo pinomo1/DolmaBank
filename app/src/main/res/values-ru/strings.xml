@@ -45,7 +45,7 @@
     <string name="that_same">Столько же сколько Вы потратили вчера</string>
     <string name="that_more">Это на %s больше чем Вы потратили вчера</string>
     <string name="that_less">Это на %s меньше чем Вы потратили вчера</string>
-    <string name="today_spent">Сегодня вы потратили...</string>
+    <string name="today_got">Сегодня вы получили...</string>
     <string name="no_card_yet">Нет карт</string>
     <string name="save">Сохранить</string>
     <string name="card_number">Номер карты</string>
