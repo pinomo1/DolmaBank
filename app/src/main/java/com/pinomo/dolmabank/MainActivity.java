@@ -60,7 +60,8 @@ public class MainActivity extends AppCompatActivity {
                 R.id.registerLandingFragment,
                 R.id.registerFragment,
                 R.id.loadingFragment,
-                R.id.addCardFragment
+                R.id.addCardFragment,
+                R.id.addTransactionFragment
         );
 
         BottomNavigationView navView = binding.navView;

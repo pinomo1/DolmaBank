@@ -51,5 +51,6 @@
     <string name="no_card_yet">No card yet</string>
     <string name="save">Save</string>
     <string name="card_number">Card number</string>
+    <string name="add_transaction">Add transaction</string>
 
 </resources>

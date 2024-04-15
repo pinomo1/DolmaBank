@@ -1,5 +1,7 @@
 package com.pinomo.dolmabank.fragments;
 
+import static androidx.navigation.fragment.FragmentKt.findNavController;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -96,6 +98,14 @@ public class HomescreenFragment extends Fragment {
         getBinding().cardsId.setOnClickListener(v -> {
             BottomNavigationView bottomNavigationView = requireActivity().findViewById(R.id.nav_view);
             bottomNavigationView.setSelectedItemId(R.id.banking);
+        });
+
+        getBinding().transferId.setOnClickListener(v -> {
+            findNavController(this).navigate(R.id.action_homescreen_to_addTransactionFragment);
+        });
+
+        getBinding().paymentId.setOnClickListener(v -> {
+            findNavController(this).navigate(R.id.action_homescreen_to_addTransactionFragment);
         });
 
         try {
