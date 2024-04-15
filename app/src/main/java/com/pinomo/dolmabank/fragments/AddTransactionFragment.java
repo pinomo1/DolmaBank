@@ -57,9 +57,22 @@ public class AddTransactionFragment extends Fragment {
 
         getBinding().button.setOnClickListener(v -> {
             String transactionName = getBinding().transactionName.getText().toString();
+            try{
+                Double.parseDouble(getBinding().transactionAmount.getText().toString());
+            }
+            catch (NumberFormatException e){
+                getBinding().transactionAmount.setError("Invalid amount");
+                return;
+            }
             Double amount = Double.parseDouble(getBinding().transactionAmount.getText().toString());
 
-            if (transactionName.isEmpty() || amount.isNaN() || amount == 0) {
+            if (!isTransactionValid()){
+                getBinding().transactionName.setError("Please enter a valid transaction name");
+                return;
+            }
+
+            if (!isAmountValid()){
+                getBinding().transactionAmount.setError("Please enter a valid amount");
                 return;
             }
 
@@ -75,6 +88,16 @@ public class AddTransactionFragment extends Fragment {
         });
 
         return view;
+    }
+
+    private boolean isTransactionValid() {
+        String transactionName = getBinding().transactionName.getText().toString();
+        return !transactionName.isEmpty() || !transactionName.isBlank();
+    }
+
+    private boolean isAmountValid() {
+        Double amount = Double.parseDouble(getBinding().transactionAmount.getText().toString());
+        return !amount.isNaN() && amount != 0;
     }
 
     @Override

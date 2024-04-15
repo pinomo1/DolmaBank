@@ -63,15 +63,27 @@ public class AddCardFragment extends Fragment {
                 return;
             }
 
+            if(!isBankNameValid()){
+                getBinding().bankName.setError("Invalid bank name");
+                return;
+            }
+
+            if(!isCardHolderValid()){
+                getBinding().cardholderName.setError("Invalid card holder name");
+                return;
+            }
+
+            if(!isCardNameValid()){
+                getBinding().cardName.setError("Invalid card name");
+                return;
+            }
+
             String cardNumber = getBinding().cardNumber.getText().toString();
             String cvv = getBinding().cvcCode.getText().toString();
             String bankName = getBinding().bankName.getText().toString();
             String cardHolder = getBinding().cardholderName.getText().toString();
             String cardName = getBinding().cardName.getText().toString();
 
-            if (cardNumber.isEmpty() || cvv.isEmpty() || bankName.isEmpty() || cardHolder.isEmpty() || cardName.isEmpty()) {
-                return;
-            }
 
             DolmaBankApp app = (DolmaBankApp) requireActivity().getApplication();
             BankCard bankCard = new BankCard();
@@ -105,6 +117,18 @@ public class AddCardFragment extends Fragment {
      */
     private boolean isCardNumberValid(){
         return getBinding().cardNumber.getText().toString().length() == 16;
+    }
+
+    private boolean isBankNameValid(){
+        return !getBinding().bankName.getText().toString().isEmpty();
+    }
+
+    private boolean isCardHolderValid(){
+        return !getBinding().cardholderName.getText().toString().isEmpty();
+    }
+
+    private boolean isCardNameValid(){
+        return !getBinding().cardName.getText().toString().isEmpty();
     }
 
 

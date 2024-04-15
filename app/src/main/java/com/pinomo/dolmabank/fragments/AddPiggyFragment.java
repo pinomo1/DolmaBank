@@ -53,10 +53,28 @@ public class AddPiggyFragment extends Fragment {
 
         getBinding().button.setOnClickListener(v -> {
             String name = getBinding().purposeField.getText().toString();
+            try {
+                Double.parseDouble(getBinding().goalField.getText().toString());
+                Integer.parseInt(getBinding().percentageField.getText().toString());
+            } catch (NumberFormatException e) {
+                getBinding().goalField.setError("Invalid amount");
+                return;
+            }
             Double amount = Double.parseDouble(getBinding().goalField.getText().toString());
             Integer percentage = Integer.parseInt(getBinding().percentageField.getText().toString());
 
-            if (name.isEmpty() || amount.isNaN() || amount <= 0 || percentage <= 0 || percentage > 100){
+            if (!isNameValid()) {
+                getBinding().purposeField.setError("Name is required");
+                return;
+            }
+
+            if (!isGoalValid()) {
+                getBinding().goalField.setError("Goal is required");
+                return;
+            }
+
+            if (!isPercentageValid()) {
+                getBinding().percentageField.setError("Percentage is required");
                 return;
             }
 
@@ -73,6 +91,21 @@ public class AddPiggyFragment extends Fragment {
         });
 
         return view;
+    }
+
+    private boolean isNameValid() {
+        String name = getBinding().purposeField.getText().toString();
+        return !name.isEmpty() || !name.isBlank();
+    }
+
+    private boolean isGoalValid() {
+        Double goal = Double.parseDouble(getBinding().goalField.getText().toString());
+        return !goal.isNaN() && goal != 0;
+    }
+
+    private boolean isPercentageValid() {
+        Integer percentage = Integer.parseInt(getBinding().percentageField.getText().toString());
+        return percentage > 0 && percentage <= 100;
     }
 
     @Override
