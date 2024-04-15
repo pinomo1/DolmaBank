@@ -1,9 +1,6 @@
 package com.pinomo.dolmabank.fragments;
 
-import static androidx.navigation.fragment.FragmentKt.findNavController;
-
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,19 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.pinomo.dolmabank.DolmaBankApp;
 import com.pinomo.dolmabank.R;
-import com.pinomo.dolmabank.cards_recyclerview.CardBodyItem;
-import com.pinomo.dolmabank.cards_recyclerview.CardsRecyclerAdapter;
-import com.pinomo.dolmabank.cards_recyclerview.CardsRecyclerViewItem;
 import com.pinomo.dolmabank.cards_recyclerview.MarginItemDecoration;
-import com.pinomo.dolmabank.database.DolmaBankDatabase;
-import com.pinomo.dolmabank.database.LocalBankCard;
-import com.pinomo.dolmabank.database.LocalBankCardDao;
 import com.pinomo.dolmabank.database.LocalBankTransaction;
 import com.pinomo.dolmabank.database.LocalBankTransactionDao;
-import com.pinomo.dolmabank.databinding.BankingFragmentBinding;
 import com.pinomo.dolmabank.databinding.HistoryFragmentBinding;
-import com.pinomo.dolmabank.databinding.RegisterLandingFragmentBinding;
-import com.pinomo.dolmabank.models.BankCard;
 import com.pinomo.dolmabank.transactions_recyclerview.TransactionBodyItem;
 import com.pinomo.dolmabank.transactions_recyclerview.TransactionHeaderItem;
 import com.pinomo.dolmabank.transactions_recyclerview.TransactionsRecyclerAdapter;
@@ -58,14 +46,14 @@ public class HistoryFragment extends Fragment {
     @Nullable
     private RecyclerView recyclerView;
     private TransactionsRecyclerAdapter infoAdapter;
-    private List<TransactionsRecyclerViewItem> cardArrayList;
+    private List<TransactionsRecyclerViewItem> transactionArrayList;
 
     /**
      * Instantiates a new Banking fragment.
      */
     public HistoryFragment() {
         super(R.layout.history_fragment);
-        cardArrayList = new ArrayList<>();
+        transactionArrayList = new ArrayList<>();
     }
 
     @Nullable
@@ -98,9 +86,9 @@ public class HistoryFragment extends Fragment {
             cardItems.add(createCardBodyItem(transaction));
         }
 
-        cardArrayList.addAll(cardItems);
+        transactionArrayList.addAll(cardItems);
 
-        infoAdapter = new TransactionsRecyclerAdapter(cardArrayList);
+        infoAdapter = new TransactionsRecyclerAdapter(transactionArrayList);
         assert recyclerView != null;
         recyclerView.setAdapter(infoAdapter);
     }
@@ -121,6 +109,6 @@ public class HistoryFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         _binding = null;
-        cardArrayList.clear();
+        transactionArrayList.clear();
     }
 }

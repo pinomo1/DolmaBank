@@ -5,15 +5,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/backgroundColor">
     <ImageView
+            android:id="@+id/return_icon"
         android:layout_width="30dp"
         android:layout_height="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/return_icon"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-
-        ></ImageView>
+        android:layout_marginTop="10dp"/>
 
     <TextView
         android:layout_width="256dp"
@@ -61,6 +60,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="9dp"/>
             <EditText
+                    android:id="@+id/purpose_field"
                 android:layout_width="300dp"
                 android:layout_height="34dp"
                 android:hint="@string/purpose_field"
@@ -86,12 +86,13 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="9dp"/>
             <EditText
+                android:id="@+id/goal_field"
                 android:layout_width="300dp"
                 android:layout_height="34dp"
                     android:hint="@string/goal_field"
                     android:background="@color/menuColor"
                     android:textColorHint="@color/white"
-                    android:inputType="number|numberDecimal|numberSigned"
+                    android:inputType="number|numberDecimal"
                 android:fontFamily="@font/lora_medium"
                 android:textSize="20sp"
                 android:textColor="@color/white"
@@ -111,18 +112,35 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="9dp"/>
             <EditText
+                android:id="@+id/percentage_field"
                 android:layout_width="300dp"
                 android:layout_height="34dp"
                     android:hint="@string/percentage_field"
                     android:background="@color/menuColor"
                     android:textColorHint="@color/white"
-                    android:inputType="number|numberDecimal|numberSigned"
+                    android:inputType="number"
                 android:fontFamily="@font/lora_medium"
                 android:textSize="20sp"
                 android:textColor="@color/white"
                 android:layout_marginStart="72dp"
                 android:layout_marginTop="16dp"/>
         </FrameLayout>
+
+        <Button
+                android:id="@+id/button"
+                android:layout_width="380dp"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/white"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/lora_bold"
+                android:gravity="center"
+                android:paddingBottom="8dp"
+                android:text="@string/new_piggy"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:cornerRadius="8dp"
+                app:layout_constraintVertical_bias="0.8" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

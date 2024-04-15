@@ -108,6 +108,10 @@ public class HomescreenFragment extends Fragment {
             findNavController(this).navigate(R.id.action_homescreen_to_addTransactionFragment);
         });
 
+        getBinding().piggyId.setOnClickListener(v -> {
+            findNavController(this).navigate(R.id.action_homescreen_to_piggyFragment);
+        });
+
         try {
             Double balance = bankCardDao.getOverallBalance();
             getBinding().yourMoney.setText(AppUtils.formatBalance(balance));

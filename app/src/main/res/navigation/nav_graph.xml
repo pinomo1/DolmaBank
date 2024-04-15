@@ -37,6 +37,9 @@
         <action
                 android:id="@+id/action_homescreen_to_addTransactionFragment"
                 app:destination="@id/addTransactionFragment" />
+        <action
+                android:id="@+id/action_homescreen_to_piggyFragment"
+                app:destination="@id/piggyFragment" />
     </fragment>
     <fragment
             android:id="@+id/profile"
@@ -69,5 +72,24 @@
         <action
                 android:id="@+id/action_addTransactionFragment_to_homescreen"
                 app:destination="@id/homescreen" />
+    </fragment>
+    <fragment
+            android:id="@+id/piggyFragment"
+            android:name="com.pinomo.dolmabank.fragments.PiggyFragment"
+            android:label="PiggyFragment" >
+        <action
+                android:id="@+id/action_piggyFragment_to_homescreen"
+                app:destination="@id/homescreen" />
+        <action
+                android:id="@+id/action_piggyFragment_to_addPiggyFragment"
+                app:destination="@id/addPiggyFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/addPiggyFragment"
+            android:name="com.pinomo.dolmabank.fragments.AddPiggyFragment"
+            android:label="AddPiggyFragment" >
+        <action
+                android:id="@+id/action_addPiggyFragment_to_piggyFragment"
+                app:destination="@id/piggyFragment" />
     </fragment>
 </navigation>

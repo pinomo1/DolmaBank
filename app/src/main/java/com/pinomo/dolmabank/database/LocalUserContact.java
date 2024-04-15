@@ -16,5 +16,5 @@ public non-sealed class LocalUserContact extends LocalPayloadEntity {
      * The User contacts.
      */
     @Embedded
-    UserContact userContacts;
+    public UserContact userContacts;
 }

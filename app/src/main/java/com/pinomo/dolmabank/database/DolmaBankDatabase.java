@@ -10,7 +10,7 @@ import androidx.room.RoomDatabase;
 /**
  * DolmaBankDatabase is the main database (abstract) class that extends RoomDatabase.
  */
-@Database(entities = {LocalBankTransaction.class, LocalUser.class, LocalUserContact.class, LocalBankCard.class}, version = 1, exportSchema = false)
+@Database(entities = {LocalBankTransaction.class, LocalUser.class, LocalUserContact.class, LocalBankCard.class, LocalPiggy.class}, version = 1, exportSchema = false)
 abstract public class DolmaBankDatabase extends RoomDatabase {
     /**
      * Abstract method to get the LocalBankTransactionDao object.
@@ -39,6 +39,8 @@ abstract public class DolmaBankDatabase extends RoomDatabase {
      * @return LocalBankCardDao object.
      */
     public abstract LocalBankCardDao getLocalBankCardDao();
+
+    public abstract LocalPiggyDao getLocalPiggyDao();
 
     /**
      * Singleton pattern to get the instance of the DolmaBankDatabase.

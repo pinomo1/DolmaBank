@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgroundColor">
+    <ImageView
+            android:id="@+id/return_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/return_icon"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"/>
+    <TextView
+            android:id="@+id/piggy_text"
+        android:layout_width="156dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/piggy_banks"
+        android:fontFamily="@font/lora_bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <FrameLayout
+            android:id="@+id/add_piggy_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintTop_toTopOf="@id/return_icon"
+            app:layout_constraintBottom_toBottomOf="@id/return_icon"
+            android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/plus_icon" />
+
+    </FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/piggy_recycler"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/piggy_text"
+            android:layout_gravity="center"
+            app:layoutManager="LinearLayoutManager"
+        android:layout_marginTop="30dp"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
